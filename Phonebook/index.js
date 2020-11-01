@@ -4,6 +4,9 @@ const app= express();
 const morgan = require("morgan");
 app.use(express.json());
 
+const cors = require('cors')
+
+app.use(cors())
 
  //logging to cmd
 morgan.token('data', (req) => JSON.stringify(req.body))
